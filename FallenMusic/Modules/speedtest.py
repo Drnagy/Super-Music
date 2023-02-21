@@ -44,7 +44,7 @@ def testspeed(m):
     return result
 
 
-@app.on_message(filters.command(["speedtest", "spt"]) | filters.command(["سرعه البوت","السرعه"]),prefixes= ["/", "!","","#"] & SUDOERS)
+@app.on_message(filters.command(["speedtest", "spt"]) | filters.command(["سرعه البوت","السرعه"],prefixes= ["/", "!","","#"]) & SUDOERS)
 async def speedtest_function(_, message):
     m = await message.reply_text("**» ʀᴜɴɴɪɴɢ sᴩᴇᴇᴅᴛᴇsᴛ...**")
     loop = asyncio.get_event_loop()
