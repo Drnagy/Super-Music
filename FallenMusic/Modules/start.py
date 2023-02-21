@@ -104,7 +104,7 @@ async def fallen_st(_, message: Message):
         )
         
 
-@app.on_message(filters.command(["id"]) | filters.command(["ا","ايدي"],prefixes= ["/", "!","","#"]) & filters.group & ~filters.edited)
+@app.on_message(filters.command(["id"]) | filters.command(["ا","ايدي"],prefixes= ["/", "!","","#"]))
 async def superspeed(_, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
